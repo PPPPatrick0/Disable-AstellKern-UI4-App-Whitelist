@@ -7,7 +7,7 @@
 [在开始之前，请确保你已经按照此指南获得了Apatch与Root权限](https://github.com/PPPPatrick0/AstellKern-DAP-Root-Guide)
 
 ## [Chinese Version](https://github.com/PPPPatrick0/Disable-AstellKern-UI4-App-Whitelist/tree/main?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E7%89%88chinese-version)
-## [English Version]()
+## [English Version](https://github.com/PPPPatrick0/Disable-AstellKern-UI4-App-Whitelist/blob/main/README.md#english-version-1)
 
 ## 中文版（Chinese Version）
 
@@ -16,7 +16,6 @@
 * 第二部分，为尚未获得支持的机型提供原理说明，使自己尝试禁用限制成为可能。
 
 ### 第一部分
-
 #### 1 通过Apatch安装模块  
 从Release中下载 Modules.zip ，并将文件传送至您的设备。  
 在Apatch中进行安装  
