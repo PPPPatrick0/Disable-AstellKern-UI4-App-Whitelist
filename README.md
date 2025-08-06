@@ -36,7 +36,8 @@ su
 显示Mount RW: /system done，证明权限赋予成功。  
 *接着执行如下命令，写入修改过的services.jar：
 ```
-cp /sdcard/Services_patched.jar /system/framework/services.jar 
+# 将你的设备所对应的Services_patched.jar替换为实际名称
+cp /sdcard/"Services_patched.jar" /system/framework/services.jar
 ```
 *然后删除原有jar包的预编译文件：
 ```
@@ -83,7 +84,8 @@ If you see the output Mount RW: /system done, it means the permission has been s
 * Copy the modified services.jar into the system:  
 Next, execute the following command to replace the original services.jar:
 ```
-cp /sdcard/Services_patched.jar /system/framework/services.jar 
+# Replace "Services_patched.jar" with the actual filename for your device
+cp /sdcard/"Services_patched.jar" /system/framework/services.jar
 ```
 * Remove the pre-compiled cache files for the original jar:  
 ```
