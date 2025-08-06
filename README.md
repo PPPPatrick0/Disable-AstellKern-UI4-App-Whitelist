@@ -53,5 +53,9 @@ rm /system/framework/oat/arm64/services.vdex
 Oops:404 Not Found  
 请等待完善
 
+
+## English Version
+
+
 感谢列表
 Overlayfs RW
