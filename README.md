@@ -6,7 +6,7 @@
 [Before you begin, please ensure you have already obtained root access via APatch by following this guide.](https://github.com/PPPPatrick0/AstellKern-DAP-Root-Guide)  
 [在开始之前，请确保你已经按照此指南获得了Apatch与Root权限](https://github.com/PPPPatrick0/AstellKern-DAP-Root-Guide)
 
-## [Chinese Version]()
+## [Chinese Version](https://github.com/PPPPatrick0/Disable-AstellKern-UI4-App-Whitelist/tree/main?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E7%89%88chinese-version)
 ## [English Version]()
 
 ## 中文版（Chinese Version）
