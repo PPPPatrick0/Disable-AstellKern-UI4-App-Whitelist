@@ -101,6 +101,7 @@ Please wait for this section to be completed.
 
 
 ## Shout-Outs!
+This success wouldn't have been possible without these legends:
 * The APatch Team: Your kernel-patching approach was the skeleton key that bypassed this device's final defenses. Absolute genius!
 * The Overlayfs RW module: For providing a straightforward way for users to gain read-write access to the /system partition.  
 * The AKBox dev [@7dollars](https://github.com/7dollars) and community: Thanks for all the encouragement and support. You were the motivation that kept me going!  
