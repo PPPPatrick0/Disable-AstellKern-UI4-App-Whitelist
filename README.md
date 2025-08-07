@@ -12,7 +12,7 @@
 ## 中文版（Chinese Version）
 
 ### 本指南将分为两部分
-* 第一部分，为已获得支持的机型提供傻瓜式安装指南。（截至V0.1，获得支持的有SP3000(V1.51)）
+* 第一部分，为已获得支持的机型提供傻瓜式安装指南。（截至V0.1，获得支持的有SP3000系列全部机型(SP3000 SP3000T SP3000M)）
 * 第二部分，为尚未获得支持的机型提供原理说明，使自己尝试禁用限制成为可能。
 
 ### 第一部分
@@ -58,7 +58,7 @@ rm /system/framework/oat/arm64/services.vdex
 ## English Version
 
 ### This guide is divided into two parts:
-* Part 1: A user-friendly installation guide for supported models. (As of v0.1, this includes the SP3000 on firmware v1.51).
+* Part 1: A user-friendly installation guide for supported models. (As of v0.1, this includes the SP3000 series (SP3000 , SP3000T , SP3000M)).
 * Part 2: A technical explanation of the principles involved, enabling users to attempt disabling the restriction on unsupported models themselves.
 
 ### Part 1: Step-by-Step Guide for Supported Models
