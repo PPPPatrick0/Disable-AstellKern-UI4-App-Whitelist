@@ -51,8 +51,38 @@ rm /system/framework/oat/arm64/services.vdex
   
   
 ### 第二部分
+<del>
 **Oops:404 Not Found**  
 请等待完善
+</del>
+
+我将告诉你如何禁用白名单限制，以及它的原理
+
+#### 1 阶段一：分析
+* 线索: 在尝试进行安装白名单以外的APK时，Logcat日志明确指出，执行安装验证的进程是system_server，并且AkPackageManager.apk的源码显示，它调用了系统底层的PackageManager.getAvailableOpenAppPackages()方法来获取白名单。
+* 假设: 白名单的真正逻辑，被硬编码在安卓的核心框架中，而不是在一个简单的系统App里。
+* 行动:  
+从设备中提取出核心框架文件：framework.jar和services.jar。  
+对两者进行反编译和搜索。  
+* 突破:  
+在framework.jar中没有找到相关逻辑。  
+在services.jar中，成功定位到了com.android.server.pm.PackageInstallerSession这个类。  
+在该类的validateApkInstallLocked方法中，我们找到了与日志行为完全一致的、最终的白名单验证代码块。
+
+#### 2 阶段二：修改
+我们发现，破解的关键在于直接绕过validateApkInstallLocked方法中的if判断语句。
+* 方案 (Smali修改):  
+在validateApkInstallLocked方法的Smali代码中，精确定位到与if (!supportPackage)相对应的条件跳转指令 (if-eqz v0, :cond_XYZ)。  
+我们的方案是，通过注释掉 (#) 这条跳转指令，来“剪断”那条通往“抛出异常、安装失败”的逻辑通路，使得无论检查结果如何，程序都会继续执行正常的安装流程。  
+
+#### 3 阶段三：复原
+重新打包并覆盖services.jar  
+删除oat里的缓存serveices缓存  
+
+
+
+
+
 
 
 ## English Version
@@ -98,8 +128,33 @@ rm /system/framework/oat/arm64/services.vdex
   
   
 ### Part 2: Technical Deep-Dive & Guide for Unsupported Models
+<del>
 **Oops: 404 Not Found**  
 Please wait for this section to be completed.
+</del>
+
+I will show you how to disable the whitelist restriction, and explain the principles behind how it works.
+
+#### Phase 1: Analysis
+* Clues: When attempting to install a non-whitelisted APK.Logcat analysis clearly indicated that the installation validation process was handled by system_server. Furthermore, the source code of AkPackageManager.apk revealed that it retrieves the whitelist by calling a low-level system method: PackageManager.getAvailableOpenAppPackages().
+* Hypothesis: The true whitelist logic is hardcoded within the core Android framework, not inside a simple system application.
+* Action:  
+Extracted the core framework files from the device: framework.jar and services.jar.  
+Decompiled and searched through both files.  
+* Breakthrough:  
+No relevant logic was found in framework.jar.  
+Successfully located the com.android.server.pm.PackageInstallerSession class within services.jar.  
+Inside the validateApkInstallLocked method of this class, we found the definitive whitelist validation code block that perfectly matched the behavior seen in the logs.
+
+#### Phase 2: Modification
+We discovered that the key to the solution was to directly bypass the final if conditional check within the validateApkInstallLocked method.
+* The Plan (Smali Modification):  
+Pinpoint the conditional jump instruction in the Smali code of the validateApkInstallLocked method that corresponds to the if (!supportPackage) check (e.g., if-eqz v0, :cond_XYZ).  
+Our strategy was to comment out (#) this jump instruction. This effectively severs the logical path that leads to throwing an exception and failing the installation, forcing the program to proceed with the normal installation flow regardless of the check's outcome.
+
+#### Phase 3: Reassembly & Deployment
+Repackage and Overwrite: Re-packaged the modified Smali code back into services.jar and used root access to overwrite the original file in /system/framework/.  
+Clear Cache: Deleted the oat cache files (.art, .odex, .vdex) for services.jar to force the system to regenerate them based on our modified version upon reboot.
 
 
 ## Shout-Outs!
