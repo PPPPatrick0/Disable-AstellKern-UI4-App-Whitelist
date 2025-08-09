@@ -91,7 +91,7 @@ rm /system/framework/oat/arm64/services.vdex
 
 ### This guide is divided into two parts:
 * Part 1: A user-friendly installation guide for supported models.  
-(As of v0.1, this includes the SP3000 series (SP3000 , SP3000T , SP3000M)).
+(As of v0.1, this includes the SP3000 series (SP3000 , SP3000T , SP3000M))  
 (V0.2 Add SR35 support)
 * Part 2: A technical explanation of the principles involved, enabling users to attempt disabling the restriction on unsupported models themselves.
 
