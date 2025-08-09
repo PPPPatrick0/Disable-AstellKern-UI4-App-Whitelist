@@ -29,19 +29,19 @@ Overlayfs RW安装时
 #### 2 安装service.jar
 从Release中下载Services_patched.jar  
 移动至设备的内部存储的根目录  
-*执行如下命令，赋予system目录读写权限：
+* 执行如下命令，赋予system目录读写权限：
 ```
 adb shell
 su
 /data/overlayfs/tmp/overlayrw -rw /system
 ```
 显示Mount RW: /system done，证明权限赋予成功。  
-*接着执行如下命令，写入修改过的services.jar：
+* 接着执行如下命令，写入修改过的services.jar：
 ```
 # 将你的设备所对应的Services_patched.jar替换为实际名称
 cp /sdcard/"Services_patched.jar" /system/framework/services.jar
 ```
-*然后删除原有jar包的预编译文件：
+* 然后删除原有jar包的预编译文件：
 ```
 rm /system/framework/oat/arm64/services.art
 rm /system/framework/oat/arm64/services.odex
