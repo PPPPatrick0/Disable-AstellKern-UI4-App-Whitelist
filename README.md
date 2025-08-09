@@ -165,5 +165,6 @@ Clear Cache: Deleted the oat cache files (.art, .odex, .vdex) for services.jar t
 This success wouldn't have been possible without these legends:
 * The APatch Team: Your kernel-patching approach was the skeleton key that bypassed this device's final defenses. Absolute genius!
 * The Overlayfs RW module: For providing a straightforward way for users to gain read-write access to the /system partition.  
-* The AKBox dev [@7dollars](https://github.com/7dollars) and community: Thanks for all the encouragement and support. You were the motivation that kept me going!  
+* The AKBox dev [@7dollars](https://github.com/7dollars) and community: Thanks for all the encouragement and support. You were the motivation that kept me going!
+* [@rlw6534](https://github.com/rlw6534):	verified for SR35
 * Google Gemini: My AI partner, who provided tireless technical support and brainstorming sessions. AI-assisted reverse engineering is incredibly cool.
