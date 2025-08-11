@@ -92,7 +92,7 @@ rm /system/framework/oat/arm64/services.vdex
 ## English Version
 
 ### This guide is divided into two parts:
-* Part 1: A user-friendly installation guide for supported models.
+* Part 1: A user-friendly installation guide for supported models.  
 (For Qualcomm-based Android 10 devices, you can follow Step 2 in Part 1 below for a quick installation.  
 For Rockchip-based Android 9 devices, you will need to manually repack the system.img after patching the services.jar and then flash the entire image.)  
 (As of v0.1, this includes the SP3000 series (SP3000 , SP3000T , SP3000M))  
