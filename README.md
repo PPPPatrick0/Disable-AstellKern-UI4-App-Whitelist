@@ -79,7 +79,7 @@ rm /system/framework/oat/arm64/services.vdex
 我们发现，破解的关键在于直接绕过validateApkInstallLocked方法中的if判断语句。
 * 方案 (Smali修改):  
 在validateApkInstallLocked方法的Smali代码中，精确定位到与if (!supportPackage)相对应的条件跳转指令 (if-eqz v0, :cond_XYZ)。  
-我们的方案是，通过注释掉 (#) 这条跳转指令，来“剪断”那条通往“抛出异常、安装失败”的逻辑通路，使得无论检查结果如何，程序都会继续执行正常的安装流程。  
+我们的方案是，通过注释掉 (#) 这条跳转指令，使得无论检查结果如何，程序都会继续执行正常的安装流程。  
 
 #### 3 阶段三：复原
 重新打包并覆盖services.jar  
