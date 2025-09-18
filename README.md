@@ -13,7 +13,7 @@
 
 ### 本指南将分为两部分
 * 第一部分，为已获得支持的机型提供傻瓜式安装指南。  
-（对于使用了高通芯片的Android10机型，您可以参照下面的第一部分的第二步来快速安装  
+（对于使用了高通芯片的Android10机型，您可以参照下面的第一部分来快速安装  
 对于瑞芯微芯片的Android9机型，您需要在patch services.jar之后手动打包system.img并刷入  
 对于使用了联发科芯片的机型(如PD10,KannUltra)，情况未知）
   
@@ -95,7 +95,7 @@ rm /system/framework/oat/arm64/services.vdex
 
 ### This guide is divided into two parts:
 * Part 1: A user-friendly installation guide for supported models.  
-(For Qualcomm-based Android 10 devices, you can follow Step 2 in Part 1 below for a quick installation.  
+(For Qualcomm-based Android 10 devices, you can follow Part 1 below for a quick installation.  
 For Rockchip-based Android 9 devices, you will need to manually repack the system.img after patching the services.jar and then flash the entire image.  
 For MediaTek-based devices (PD10 and KannUltra) ,  the situation is unknown.)
   
