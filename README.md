@@ -12,14 +12,16 @@
 ## 中文版（Chinese Version）
 
 ### 本指南将分为两部分
-* 第一部分，为已获得支持的机型提供傻瓜式安装指南。  
-（对于使用了高通芯片的Android10机型，您可以参照下面的第一部分来快速安装  
-对于瑞芯微芯片的Android9机型，您需要在patch services.jar之后手动打包system.img并刷入  
-对于使用了联发科芯片的机型(如PD10,KannUltra)，情况未知）
+  
+* 第一部分，为SP3000系列机型提供傻瓜式安装指南。  
+  
+* 第二部分，为所有机型提供原理说明，使自己尝试禁用限制成为可能。
   
 （V0.1，获得支持的有SP3000系列全部机型(SP3000 SP3000T SP3000M)  
 （V0.2，SR35得到支持）
-* 第二部分，为尚未获得支持的机型提供原理说明，使自己尝试禁用限制成为可能。
+  
+（对于瑞芯微芯片的Android9机型，您需要在patch services.jar之后手动打包system.img并刷入  
+对于使用了联发科芯片的机型(如PD10,KannUltra)，情况未知）
 
 ### 第一部分
 #### 1 通过Apatch安装模块  
@@ -94,14 +96,15 @@ rm /system/framework/oat/arm64/services.vdex
 ## English Version
 
 ### This guide is divided into two parts:
-* Part 1: A user-friendly installation guide for supported models.  
-(For Qualcomm-based Android 10 devices, you can follow Part 1 below for a quick installation.  
-For Rockchip-based Android 9 devices, you will need to manually repack the system.img after patching the services.jar and then flash the entire image.  
-For MediaTek-based devices (PD10 and KannUltra) ,  the situation is unknown.)
+* Part 1: A user-friendly installation guide for SP3000 series.  
+  
+* Part 2: A technical explanation of the principles involved, enabling users to attempt disabling the restriction on all models themselves.
   
 (As of v0.1, this includes the SP3000 series (SP3000 , SP3000T , SP3000M))  
 (V0.2 Add SR35 support)
-* Part 2: A technical explanation of the principles involved, enabling users to attempt disabling the restriction on unsupported models themselves.
+  
+(For Rockchip-based Android 9 devices, you will need to manually repack the system.img after patching the services.jar and then flash the entire image.  
+For MediaTek-based devices (PD10 and KannUltra) ,  the situation is unknown.)
 
 ### Part 1: Step-by-Step Guide for Supported Models
 #### 1. Install the Module via APatch
