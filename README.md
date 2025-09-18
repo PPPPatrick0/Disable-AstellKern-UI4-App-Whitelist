@@ -17,7 +17,7 @@
   
 * 第二部分，为所有机型提供原理说明，使自己尝试禁用限制成为可能。
   
-（V0.1，获得支持的有SP3000系列全部机型(SP3000 SP3000T SP3000M)  
+（V0.1，获得预patch的services.jar支持的有SP3000系列全部机型(SP3000 SP3000T SP3000M)  
 （V0.2，SR35得到支持）
   
 （对于瑞芯微芯片的Android9机型，您需要在patch services.jar之后手动打包system.img并刷入  
@@ -100,7 +100,7 @@ rm /system/framework/oat/arm64/services.vdex
   
 * Part 2: A technical explanation of the principles involved, enabling users to attempt disabling the restriction on all models themselves.
   
-(As of v0.1, this includes the SP3000 series (SP3000 , SP3000T , SP3000M))  
+(As of v0.1, this includes pre_patched services.jar for SP3000 series (SP3000 , SP3000T , SP3000M))  
 (V0.2 Add SR35 support)
   
 (For Rockchip-based Android 9 devices, you will need to manually repack the system.img after patching the services.jar and then flash the entire image.  
